@@ -1,0 +1,31 @@
+[
+  {
+    "text": "Home",
+    "link": "/",
+    "dropdown": "false"
+  },
+
+  {
+    "text": "Clothing",
+    "link": "/clothing",
+    "dropdown": "true"
+  },
+
+  {
+    "text": "Gift Card",
+    "link": "/gift",
+    "dropdown": "false"
+  },
+
+  {
+    "text": "About",
+    "link": "/about",
+    "dropdown": "false"
+  },
+
+  {
+    "text": "Contact",
+    "link": "/contact",
+    "dropdown": "false"
+  }
+]
