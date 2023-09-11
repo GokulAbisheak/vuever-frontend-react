@@ -163,7 +163,7 @@ const Cart = () => {
           )}
         </div>
       </div>
-      <div className="bg-[#f2f2f2] shadow-[0_0_5px_0_rgba(0,0,0,0.5)] w-full py-[10px] sticky bottom-0 flex justify-end px-[20px] items-center">
+      <div className="bg-[#f2f2f2] w-full py-[10px] sticky bottom-0 flex justify-end px-[20px] items-center">
         <div className="grid gap-[10px]">
           <div className="flex justify-between gap-[40px] items-center">
             <div className="font-semibold">
