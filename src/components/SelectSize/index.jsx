@@ -5,14 +5,14 @@ import React, { useEffect, useState } from "react";
 
 const SelectSize = (props) => {
   const [selected, setSelected] = useState();
-  const [cart, setCart] = useState(JSON.parse(localStorage.getItem("cart")));  
+  const [cart, setCart] = useState(JSON.parse(localStorage.getItem("cart")) || []);  
 
   const handleAddCart = () => {
     props.item.selectedSize = selected;
+    props.item.quantity = 1;
 
     const addItem = props.item;
-
-    const newItem = [...JSON.parse(localStorage.getItem("cart")), addItem]
+    const newItem = [...cart, addItem]
     localStorage.setItem("cart", JSON.stringify(newItem));
 
     props.close();
@@ -54,7 +54,7 @@ const SelectSize = (props) => {
                         <button
                           id={item.label}
                           key={item.label}
-                          className={`uppercase border-2 border-black rounded font-semibold w-[50px] h-[50px] disabled:text-red-600 disabled:border-red-600 disabled:hover:bg-white ${
+                          className={`uppercase border-2 border-black rounded font-semibold w-[50px] h-[50px] disabled:text-gray-200 disabled:border-gray-200 disabled:hover:bg-white ${
                             selected === item.label
                               ? `bg-black text-white hover:bg-black`
                               : `hover:bg-gray-200`
@@ -84,7 +84,7 @@ const SelectSize = (props) => {
             </div>
             <div className="flex justify-end w-full pt-[30px]">
               <button
-                className="uppercase border-2 border-black rounded-[20px] text-xs p-[10px] font-bold hover:bg-black hover:text-white duration-300 disabled:text-gray-400 disabled:border-gray-400 disabled:hover:bg-white"
+                className="uppercase rounded-[20px] text-xs p-[10px] font-bold text-white bg-black hover:bg-gray-700 duration-300 disabled:bg-gray-200 hover:disabled:bg-gray-200"
                 disabled={selected ? false : true}
                 onClick={() => {
                   handleAddCart();

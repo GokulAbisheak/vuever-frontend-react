@@ -8,6 +8,7 @@ const LatestCollections = () => {
 
   const products = [
     {
+      id: 1,
       name: "Product 1",
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum",
@@ -25,6 +26,7 @@ const LatestCollections = () => {
     },
 
     {
+      id: 2,
       name: "Product 2",
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum",
@@ -42,6 +44,7 @@ const LatestCollections = () => {
     },
 
     {
+      id: 3,
       name: "Product 3",
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum",
@@ -59,6 +62,7 @@ const LatestCollections = () => {
     },
 
     {
+      id: 4,
       name: "Product 4",
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum",
@@ -76,6 +80,7 @@ const LatestCollections = () => {
     },
 
     {
+      id: 5,
       name: "Product 5",
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum",
@@ -93,6 +98,7 @@ const LatestCollections = () => {
     },
 
     {
+      id: 6,
       name: "Product 6",
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum",
@@ -110,6 +116,7 @@ const LatestCollections = () => {
     },
 
     {
+      id: 7,
       name: "Product 7",
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum",
@@ -127,6 +134,7 @@ const LatestCollections = () => {
     },
 
     {
+      id: 8,
       name: "Product 8",
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum",
@@ -144,6 +152,7 @@ const LatestCollections = () => {
     },
 
     {
+      id: 9,
       name: "Product 9",
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum",
@@ -161,6 +170,7 @@ const LatestCollections = () => {
     },
 
     {
+      id: 10,
       name: "Product 10",
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum",
@@ -191,10 +201,9 @@ const LatestCollections = () => {
 
   return (
     <>
-      <div className="min-h-[calc(100vh-64px)] w-full flex flex-col justify-center text-center py-[50px]">
+      <div id="latest" className="min-h-[calc(100vh-64px)] w-full flex flex-col justify-center text-center py-[64px]">
         <div
-          id="latest"
-          className="w-full uppercase font-bold mb-[50px] text-xl flex text-center items-center justify-center"
+          className="w-full uppercase font-bold mb-[50px] text-xl flex text-center items-center justify-center pt-[20px]"
         >
           Latest Collections
         </div>
@@ -218,7 +227,7 @@ const LatestCollections = () => {
                       <div className="w-full flex justify-between items-center">
                         <div className="font-light">{`LKR ${item.price}`}</div>
                         <button
-                          className="uppercase text-xs bg-transparent text-black border-black border-[2px] hover:bg-black hover:text-white duration-300 py-[5px] px-[10px] rounded-[20px_0_10px_20px] font-semibold"
+                          className="uppercase text-xs bg-black text-white hover:bg-gray-700 duration-300 py-[5px] px-[10px] rounded-[20px_0_10px_20px] font-semibold"
                           onClick={() => {
                             handleOpen(item);
                           }}

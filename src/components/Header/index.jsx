@@ -12,11 +12,22 @@ import { useEffect, useState } from "react";
 const Header = () => {
   const [isDrop, setIsDrop] = useState(false);
   const [isLogged, setIsLogged] = useState(false);
-  const [cart, setCart] = useState();
+  const [cart, setCart] = useState(
+    JSON.parse(localStorage.getItem("cart")) || []
+  );
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
-    setCart(JSON.parse(localStorage.getItem("cart")));
-  })
+    setCart(JSON.parse(localStorage.getItem("cart")) || []);
+    if(cart.length) {
+      let count = 0;
+      cart.map((item) => {
+        count = count + item.quantity;
+      })
+
+      setCount(count);
+    }
+  }, cart);
 
   return (
     <>
@@ -78,15 +89,21 @@ const Header = () => {
             />
             <FontAwesomeIcon className="cursor-pointer" icon={faSearch} />
           </div>
-          <button className="hover:bg-white hover:bg-opacity-10 w-[40px] h-[40px] rounded-full flex items-center justify-center relative">
-            <FontAwesomeIcon
-              className="cursor-pointer text-lg"
-              icon={faCartShopping}
-            />
-            <div className="absolute rounded-[20px] bg-red-600 text-white text-[10px] w-[15px] h-[15px] absolute top-[0px] right-[0px] items-center justify-center">
-              {cart && cart.length ? cart.length : ''}
-            </div>
-          </button>
+          <Link to="/cart">
+            <button className="hover:bg-white hover:bg-opacity-10 w-[40px] h-[40px] rounded-full flex items-center justify-center relative">
+              <FontAwesomeIcon
+                className="cursor-pointer text-lg"
+                icon={faCartShopping}
+              />
+              {count > 0 ? (
+                <div className="absolute rounded-[20px] bg-red-600 text-white text-[10px] w-[15px] h-[15px] absolute top-[0px] right-[0px] items-center justify-center">
+                  {count}
+                </div>
+              ) : (
+                <></>
+              )}
+            </button>
+          </Link>
           {isLogged ? (
             <button className="hover:bg-white hover:bg-opacity-10 w-[40px] h-[40px] rounded-full flex items-center justify-center">
               <FontAwesomeIcon
