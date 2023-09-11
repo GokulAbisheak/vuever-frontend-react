@@ -24,7 +24,7 @@ const NewCollections = () => {
               <div className="uppercase font-bold text-xl">{item.title}</div>
               <div className="font-medium">{item.description}</div>
               <Link to={item.link}>
-                <button className="px-[20px] py-[10px] bg-black rounded-full uppercase font-bold text-md hover:bg-gray-700 text-white duration-300">
+                <button className="px-[20px] py-[10px] bg-black rounded-full uppercase font-bold text-md hover:bg-gray-800 text-white duration-300">
                   {`View ${item.title}`}
                 </button>
               </Link>

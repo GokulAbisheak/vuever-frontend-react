@@ -84,7 +84,7 @@ const SelectSize = (props) => {
             </div>
             <div className="flex justify-end w-full pt-[30px]">
               <button
-                className="uppercase rounded-[20px] text-xs p-[10px] font-bold text-white bg-black hover:bg-gray-700 duration-300 disabled:bg-gray-200 hover:disabled:bg-gray-200"
+                className="uppercase rounded-[20px] text-xs p-[10px] font-bold text-white bg-black hover:bg-gray-800 duration-300 disabled:bg-gray-200 hover:disabled:bg-gray-200"
                 disabled={selected ? false : true}
                 onClick={() => {
                   handleAddCart();

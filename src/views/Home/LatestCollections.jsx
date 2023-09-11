@@ -227,7 +227,7 @@ const LatestCollections = () => {
                       <div className="w-full flex justify-between items-center">
                         <div className="font-light">{`LKR ${item.price}`}</div>
                         <button
-                          className="uppercase text-xs bg-black text-white hover:bg-gray-700 duration-300 py-[5px] px-[10px] rounded-[20px_0_10px_20px] font-semibold"
+                          className="uppercase text-xs bg-black text-white hover:bg-gray-800 duration-300 py-[5px] px-[10px] rounded-[20px_0_10px_20px] font-semibold"
                           onClick={() => {
                             handleOpen(item);
                           }}

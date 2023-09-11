@@ -172,7 +172,7 @@ const Cart = () => {
             </div>
             <div className="font-semibold text-2xl">{`${subTotal} LKR`}</div>
           </div>
-          <button className="uppercase text-white text-sm bg-black py-[10px] w-full rounded font-semibold">
+          <button className="uppercase text-white text-sm bg-black py-[10px] w-full rounded font-semibold hover:bg-gray-800 duration-300">
             Checkout
           </button>
         </div>
