@@ -16,6 +16,7 @@ const SelectSize = (props) => {
     localStorage.setItem("cart", JSON.stringify(newItem));
 
     props.close();
+    location.reload();
   };
 
   return (

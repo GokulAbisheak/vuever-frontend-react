@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 
-const Header = () => {
+const Header = (props) => {
   const [isDrop, setIsDrop] = useState(false);
   const [isLogged, setIsLogged] = useState(false);
   const [cart, setCart] = useState(
@@ -27,7 +27,7 @@ const Header = () => {
 
       setCount(count);
     }
-  }, cart);
+  }, []);
 
   return (
     <>
@@ -97,7 +97,7 @@ const Header = () => {
               />
               {count > 0 ? (
                 <div className="absolute rounded-[20px] bg-red-600 text-white text-[10px] w-[15px] h-[15px] absolute top-[0px] right-[0px] items-center justify-center">
-                  {count}
+                  {props.count || count}
                 </div>
               ) : (
                 <></>
