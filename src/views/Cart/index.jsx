@@ -3,6 +3,7 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 const Cart = () => {
   const [cart, setCart] = useState(JSON.parse(localStorage.getItem("cart")));
@@ -77,7 +78,7 @@ const Cart = () => {
 
   return (
     <>
-      <Header count={totalItem}/>
+      <Header count={totalItem} />
       <div className="min-h-[calc(100vh-64px)] w-full flex-col justify-center items-center relative">
         <div className="p-[50px]">
           <div className="w-full grid grid-cols-12 gap-y-[10px]">
@@ -175,12 +176,13 @@ const Cart = () => {
               </div>
               <div className="font-semibold text-2xl">{`${subTotal} LKR`}</div>
             </div>
-            <button className="uppercase text-white text-sm bg-black py-[10px] w-full rounded font-semibold hover:bg-gray-800 duration-300">
+            <button className="uppercase text-white text-sm bg-black py-[10px] w-full rounded font-semibold hover:bg-zinc-700 duration-300">
               Checkout
             </button>
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

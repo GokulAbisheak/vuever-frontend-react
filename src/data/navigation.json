@@ -12,12 +12,6 @@
   },
 
   {
-    "text": "Gift Card",
-    "link": "/gift",
-    "dropdown": "false"
-  },
-
-  {
     "text": "About",
     "link": "/about",
     "dropdown": "false"

@@ -19,11 +19,11 @@ const Header = (props) => {
 
   useEffect(() => {
     setCart(JSON.parse(localStorage.getItem("cart")) || []);
-    if(cart.length) {
+    if (cart.length) {
       let count = 0;
       cart.map((item) => {
         count = count + item.quantity;
-      })
+      });
 
       setCount(count);
     }
@@ -54,26 +54,23 @@ const Header = (props) => {
             <FontAwesomeIcon icon={faCaretDown} />
             {isDrop ? (
               <div className="absolute top-[64px] left-[-20px] bg-[#212121] flex flex-col w-max">
-                <Link
-                  to="/collections/#summer"
+                <a
+                  href="/collections/#summer"
                   className="p-[20px] hover:bg-neutral-900 duration-300"
                 >
                   Summer Collections
-                </Link>
-                <Link
-                  to="/collections/#winter"
+                </a>
+                <a
+                  href="/collections/#winter"
                   className="p-[20px] hover:bg-neutral-900 duration-300"
                 >
                   Winter Collections
-                </Link>
+                </a>
               </div>
             ) : (
               <></>
             )}
           </div>
-          <Link className="hover:scale-125 transition" to="/giftcard">
-            Gift Card
-          </Link>
           <Link className="hover:scale-125 transition" to="/about">
             About
           </Link>

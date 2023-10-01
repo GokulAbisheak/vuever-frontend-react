@@ -46,7 +46,7 @@ const SelectSize = (props) => {
               </div>
               <div>
                 <div className="font-semibold">{props.item.name}</div>
-                <div className="font-light">{`LKR ${props.item.price}`}</div>
+                <div className="font-normal">{`LKR ${props.item.price}`}</div>
                 <div className="mt-[20px]">
                   <div>Sizes</div>
                   <div className="flex flex-wrap gap-[10px] mt-[5px]">
@@ -85,7 +85,7 @@ const SelectSize = (props) => {
             </div>
             <div className="flex justify-end w-full pt-[30px]">
               <button
-                className="uppercase rounded-[20px] text-xs p-[10px] font-bold text-white bg-black hover:bg-gray-800 duration-300 disabled:bg-gray-200 hover:disabled:bg-gray-200"
+                className="uppercase rounded-[20px] text-xs p-[10px] font-bold text-white bg-black hover:bg-zinc-700 duration-300 disabled:bg-gray-200 hover:disabled:bg-gray-200"
                 disabled={selected ? false : true}
                 onClick={() => {
                   handleAddCart();

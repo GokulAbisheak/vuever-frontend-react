@@ -6,6 +6,7 @@ import Login from "../views/Login";
 import SignUp from "../views/Signup";
 import Forgot from "../views/ForgotPassword";
 import Cart from "../views/Cart";
+import Collections from "../views/Collections";
 
 const FrontendRoutes = () => {
   return (
@@ -17,6 +18,7 @@ const FrontendRoutes = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/forgot" element={<Forgot />} />
+            <Route path="/collections" element={<Collections />} />
           </Route>
           <Route path="/cart" element={<Cart />} />
         </Routes>

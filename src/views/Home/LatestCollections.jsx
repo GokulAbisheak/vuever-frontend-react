@@ -14,6 +14,8 @@ const LatestCollections = () => {
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum",
       price: 5000,
       image: latest,
+      type: "shirt",
+      collection: "summer",
       sizes: [
         { label: "xxs", quantity: 2 },
         { label: "xs", quantity: 2 },
@@ -32,6 +34,8 @@ const LatestCollections = () => {
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum",
       price: 5000,
       image: latest,
+      type: "shirt",
+      collection: "summer",
       sizes: [
         { label: "xxs", quantity: 2 },
         { label: "xs", quantity: 2 },
@@ -50,6 +54,8 @@ const LatestCollections = () => {
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum",
       price: 5000,
       image: latest,
+      type: "shirt",
+      collection: "summer",
       sizes: [
         { label: "xxs", quantity: 2 },
         { label: "xs", quantity: 2 },
@@ -68,6 +74,8 @@ const LatestCollections = () => {
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum",
       price: 5000,
       image: latest,
+      type: "shirt",
+      collection: "summer",
       sizes: [
         { label: "xxs", quantity: 2 },
         { label: "xs", quantity: 2 },
@@ -86,6 +94,8 @@ const LatestCollections = () => {
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum",
       price: 5000,
       image: latest,
+      type: "shirt",
+      collection: "summer",
       sizes: [
         { label: "xxs", quantity: 2 },
         { label: "xs", quantity: 2 },
@@ -104,6 +114,8 @@ const LatestCollections = () => {
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum",
       price: 5000,
       image: latest,
+      type: "shirt",
+      collection: "summer",
       sizes: [
         { label: "xxs", quantity: 2 },
         { label: "xs", quantity: 2 },
@@ -122,6 +134,8 @@ const LatestCollections = () => {
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum",
       price: 5000,
       image: latest,
+      type: "shirt",
+      collection: "summer",
       sizes: [
         { label: "xxs", quantity: 2 },
         { label: "xs", quantity: 0 },
@@ -140,6 +154,8 @@ const LatestCollections = () => {
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum",
       price: 5000,
       image: latest,
+      type: "shirt",
+      collection: "summer",
       sizes: [
         { label: "xxs", quantity: 2 },
         { label: "xs", quantity: 2 },
@@ -158,6 +174,8 @@ const LatestCollections = () => {
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum",
       price: 5000,
       image: latest,
+      type: "shirt",
+      collection: "summer",
       sizes: [
         { label: "xxs", quantity: 2 },
         { label: "xs", quantity: 2 },
@@ -176,6 +194,8 @@ const LatestCollections = () => {
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum",
       price: 5000,
       image: latest,
+      type: "shirt",
+      collection: "summer",
       sizes: [
         { label: "xxs", quantity: 2 },
         { label: "xs", quantity: 2 },
@@ -192,7 +212,7 @@ const LatestCollections = () => {
 
   const handleOpen = (item) => {
     setIsSelectSizeOpen(true);
-    setSelectedItem(item)
+    setSelectedItem(item);
   };
 
   const handleClose = () => {
@@ -201,10 +221,11 @@ const LatestCollections = () => {
 
   return (
     <>
-      <div id="latest" className="min-h-[calc(100vh-64px)] w-full flex flex-col justify-center text-center py-[64px]">
-        <div
-          className="w-full uppercase font-bold mb-[50px] text-xl flex text-center items-center justify-center pt-[20px]"
-        >
+      <div
+        id="latest"
+        className="min-h-[calc(100vh-64px)] w-full flex flex-col justify-center text-center py-[64px]"
+      >
+        <div className="w-full uppercase font-bold mb-[50px] text-xl flex text-center items-center justify-center pt-[20px]">
           Latest Collections
         </div>
         <div className="grid grid-cols-4 gap-[50px] px-[20px] w-fit mx-auto">
@@ -221,13 +242,13 @@ const LatestCollections = () => {
                     </div>
                     <div className="overflow-hidden text-left p-[10px]">
                       <div className="w-full font-medium">{item.name}</div>
-                      <div className="w-full h-[70px] mb-[10px] overflow-hidden font-light text-xs">
+                      <div className="w-full h-[70px] mb-[10px] overflow-hidden font-normal text-xs">
                         {item.description}
                       </div>
                       <div className="w-full flex justify-between items-center">
-                        <div className="font-light">{`LKR ${item.price}`}</div>
+                        <div className="font-normal">{`LKR ${item.price}`}</div>
                         <button
-                          className="uppercase text-xs bg-black text-white hover:bg-gray-800 duration-300 py-[5px] px-[10px] rounded-[20px_0_10px_20px] font-semibold"
+                          className="uppercase text-xs bg-black text-white hover:bg-zinc-700 duration-300 py-[5px] px-[10px] rounded-[20px_0_10px_20px] font-semibold"
                           onClick={() => {
                             handleOpen(item);
                           }}

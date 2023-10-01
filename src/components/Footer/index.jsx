@@ -12,7 +12,6 @@ const Footer = () => {
           <div className="grid gap-[10px]">
             <Link to="/">Home</Link>
             <Link to="/collection">Collection</Link>
-            <Link to="/giftcard">Gift Card</Link>
             <Link to="/about">About</Link>
             <Link to="/contact">Contact</Link>
           </div>
